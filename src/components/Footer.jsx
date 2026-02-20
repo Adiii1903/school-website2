@@ -48,7 +48,7 @@ export const Footer = () => {
 export const FloatingWhatsApp = () => {
     const whatsappNumber = content.school.phone.replace(/\\D/g, ''); // Extract only numbers
     const message = "Hello, I would like to know more about Kidsome Pre-Primary School.";
-    const url = `https://wa.me/\${whatsappNumber}?text=\${encodeURIComponent(message)}`;
+    const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 
     return (
         <a

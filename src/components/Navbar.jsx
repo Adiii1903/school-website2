@@ -102,6 +102,18 @@ const Navbar = () => {
         }
         
         /* Hamburger Animation */
+        .mobile-menu-btn {
+           flex-direction: column;
+           justify-content: space-between;
+        }
+        .mobile-menu-btn .bar {
+           display: block;
+           width: 100%;
+           height: 4px;
+           background-color: var(--color-primary);
+           border-radius: 4px;
+           transition: all 0.3s ease;
+        }
         .mobile-menu-btn.open .bar:nth-child(1) {
            transform: translateY(14px) rotate(45deg);
         }
@@ -110,9 +122,6 @@ const Navbar = () => {
         }
         .mobile-menu-btn.open .bar:nth-child(3) {
            transform: translateY(-14px) rotate(-45deg);
-        }
-        .mobile-menu-btn .bar {
-           transition: all 0.3s ease;
         }
       `}</style>
       <nav style={navStyles}>
@@ -123,7 +132,7 @@ const Navbar = () => {
           </a>
 
           <button
-            className={`mobile-menu-btn \${menuOpen ? 'open' : 'closed'}`}
+            className={`mobile-menu-btn ${menuOpen ? 'open' : 'closed'}`}
             style={mobileMenuBtnStyles}
             onClick={() => setMenuOpen(!menuOpen)}
           >
@@ -132,7 +141,7 @@ const Navbar = () => {
             <span className="bar"></span>
           </button>
 
-          <div className={`nav-links \${menuOpen ? 'open' : 'closed'}`} style={menuStyles}>
+          <div className={`nav-links ${menuOpen ? 'open' : 'closed'}`} style={menuStyles}>
             <a href="#about" style={itemStyles} onClick={() => setMenuOpen(false)}>About Us</a>
             <a href="#programs" style={itemStyles} onClick={() => setMenuOpen(false)}>Programs</a>
             <a href="#facilities" style={itemStyles} onClick={() => setMenuOpen(false)}>Facilities</a>
