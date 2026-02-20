@@ -81,13 +81,29 @@ const Navbar = () => {
             transition: transform 0.3s ease-in-out;
             transform: \${menuOpen ? 'translateX(0)' : 'translateX(100%)'};
             align-items: center !important;
-            z-index: 999;
+            z-index: 1000;
           }
           .mobile-menu-btn {
-            display: block !important;
-            z-index: 1000;
+            display: \${menuOpen ? 'none' : 'block'} !important;
+            z-index: 999;
             position: relative;
           }
+          .close-menu-btn {
+             display: block;
+             position: absolute;
+             top: 1.5rem;
+             right: 2rem;
+             font-size: 2rem;
+             background: transparent;
+             border: none;
+             color: var(--color-text);
+             cursor: pointer;
+          }
+        }
+        @media (min-width: 769px) {
+           .close-menu-btn {
+              display: none;
+           }
         }
       `}</style>
             <nav style={navStyles}>
@@ -100,12 +116,13 @@ const Navbar = () => {
                     <button
                         className="mobile-menu-btn"
                         style={mobileMenuBtnStyles}
-                        onClick={() => setMenuOpen(!menuOpen)}
+                        onClick={() => setMenuOpen(true)}
                     >
-                        {menuOpen ? '✕' : '☰'}
+                        ☰
                     </button>
 
                     <div className="nav-links" style={menuStyles}>
+                        <button className="close-menu-btn" onClick={() => setMenuOpen(false)}>✕</button>
                         <a href="#about" style={itemStyles} onClick={() => setMenuOpen(false)}>About Us</a>
                         <a href="#programs" style={itemStyles} onClick={() => setMenuOpen(false)}>Programs</a>
                         <a href="#facilities" style={itemStyles} onClick={() => setMenuOpen(false)}>Facilities</a>
