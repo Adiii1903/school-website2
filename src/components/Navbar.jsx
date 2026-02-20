@@ -67,17 +67,20 @@ const Navbar = () => {
             <style>{`
         @media (max-width: 768px) {
           .nav-links {
-            display: \${menuOpen ? 'flex' : 'none'} !important;
+            display: flex !important;
             flex-direction: column;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            right: 0;
+            position: fixed;
+            top: 0;
+            right: \${menuOpen ? '0' : '-100%'};
+            width: 70vw;
+            height: 100vh;
             background: rgba(255, 255, 255, 0.98);
             backdrop-filter: blur(10px);
-            padding: 1rem;
-            box-shadow: var(--shadow-md);
-            gap: 1rem !important;
+            padding: 5rem 2rem 2rem 2rem;
+            box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+            gap: 2rem !important;
+            transition: right 0.3s ease-in-out;
+            align-items: flex-start !important;
           }
           .mobile-menu-btn {
             display: block !important;
