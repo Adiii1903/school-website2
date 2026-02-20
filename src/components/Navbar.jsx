@@ -73,13 +73,16 @@ const Navbar = () => {
             top: 100%;
             left: 0;
             right: 0;
-            background: white;
-            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            padding: 1rem;
             box-shadow: var(--shadow-md);
             gap: 1rem !important;
           }
           .mobile-menu-btn {
             display: block !important;
+            z-index: 1001;
+            position: relative;
           }
         }
       `}</style>
