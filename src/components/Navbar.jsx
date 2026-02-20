@@ -67,21 +67,24 @@ const Navbar = () => {
             <style>{`
         @media (max-width: 768px) {
           .nav-links {
-            display: flex !important;
+            display: \${menuOpen ? 'flex' : 'none'} !important;
             flex-direction: column;
+            justify-content: center;
+            align-items: center !important;
             position: fixed;
             top: 0;
             left: 0;
-            width: 100vw;
+            right: 0;
+            bottom: 0;
+            width: 100%;
             height: 100vh;
-            background: rgba(255, 255, 255, 0.98);
-            backdrop-filter: blur(10px);
-            padding: 6rem 2rem 2rem 2rem;
-            gap: 2rem !important;
-            transition: transform 0.3s ease-in-out;
-            transform: \${menuOpen ? 'translateX(0)' : 'translateX(100%)'};
-            align-items: center !important;
+            background-color: var(--color-primary-light);
             z-index: 1000;
+            gap: 2.5rem !important;
+          }
+          .nav-links a {
+             font-size: 1.5rem !important;
+             font-weight: bold;
           }
           .mobile-menu-btn {
             display: \${menuOpen ? 'none' : 'block'} !important;
@@ -93,7 +96,7 @@ const Navbar = () => {
              position: absolute;
              top: 1.5rem;
              right: 2rem;
-             font-size: 2rem;
+             font-size: 2.5rem;
              background: transparent;
              border: none;
              color: var(--color-text);
