@@ -55,11 +55,12 @@ const Navbar = () => {
 
     const mobileMenuBtnStyles = {
         display: 'none',
-        fontSize: '1.5rem',
         cursor: 'pointer',
         background: 'none',
         border: 'none',
-        color: 'var(--color-text)',
+        width: '45px',
+        height: '32px',
+        padding: '0',
     };
 
     return (
@@ -99,7 +100,16 @@ const Navbar = () => {
             display: none !important;
           }
           .mobile-menu-btn.closed {
-            display: block !important;
+            display: flex !important;
+            flex-direction: column;
+            justify-content: space-between;
+          }
+          .mobile-menu-btn .bar {
+            display: block;
+            width: 100%;
+            height: 4px;
+            background-color: var(--color-primary);
+            border-radius: 4px;
           }
           .close-menu-btn {
              display: block;
@@ -134,7 +144,9 @@ const Navbar = () => {
                         style={mobileMenuBtnStyles}
                         onClick={() => setMenuOpen(true)}
                     >
-                        ☰
+                        <span className="bar"></span>
+                        <span className="bar"></span>
+                        <span className="bar"></span>
                     </button>
 
                     <div className={`nav-links \${menuOpen ? 'open' : 'closed'}`} style={menuStyles}>
