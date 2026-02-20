@@ -67,7 +67,6 @@ const Navbar = () => {
             <style>{`
         @media (max-width: 768px) {
           .nav-links {
-            display: \${menuOpen ? 'flex' : 'none'} !important;
             flex-direction: column;
             justify-content: center;
             align-items: center !important;
@@ -82,14 +81,25 @@ const Navbar = () => {
             z-index: 1000;
             gap: 2.5rem !important;
           }
+          .nav-links.open {
+            display: flex !important;
+          }
+          .nav-links.closed {
+            display: none !important;
+          }
           .nav-links a {
              font-size: 1.5rem !important;
              font-weight: bold;
           }
           .mobile-menu-btn {
-            display: \${menuOpen ? 'none' : 'block'} !important;
             z-index: 999;
             position: relative;
+          }
+          .mobile-menu-btn.open {
+            display: none !important;
+          }
+          .mobile-menu-btn.closed {
+            display: block !important;
           }
           .close-menu-btn {
              display: block;
@@ -104,8 +114,11 @@ const Navbar = () => {
           }
         }
         @media (min-width: 769px) {
+           .nav-links.closed, .nav-links.open {
+             display: flex !important;
+           }
            .close-menu-btn {
-              display: none;
+              display: none !important;
            }
         }
       `}</style>
@@ -117,14 +130,14 @@ const Navbar = () => {
                     </a>
 
                     <button
-                        className="mobile-menu-btn"
+                        className={`mobile-menu-btn \${menuOpen ? 'open' : 'closed'}`}
                         style={mobileMenuBtnStyles}
                         onClick={() => setMenuOpen(true)}
                     >
                         ☰
                     </button>
 
-                    <div className="nav-links" style={menuStyles}>
+                    <div className={`nav-links \${menuOpen ? 'open' : 'closed'}`} style={menuStyles}>
                         <button className="close-menu-btn" onClick={() => setMenuOpen(false)}>✕</button>
                         <a href="#about" style={itemStyles} onClick={() => setMenuOpen(false)}>About Us</a>
                         <a href="#programs" style={itemStyles} onClick={() => setMenuOpen(false)}>Programs</a>
