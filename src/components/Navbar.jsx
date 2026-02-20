@@ -128,7 +128,7 @@ const Navbar = () => {
         <div className="container" style={{ ...containerStyles, flexWrap: 'wrap' }}>
           <a href="#" style={logoStyles}>
             <span role="img" aria-label="kite" className="animate-float">🪁</span>
-            Kidsome
+            Kidzee
           </a>
 
           <button

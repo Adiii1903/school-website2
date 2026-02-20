@@ -9,7 +9,7 @@ export const Footer = () => {
 
                     <div style={{ flex: '1 1 300px' }}>
                         <h2 style={{ color: 'var(--color-primary)', display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1rem' }}>
-                            <span role="img" aria-label="kite">🪁</span> Kidsome
+                            <span role="img" aria-label="kite">🪁</span> Kidzee
                         </h2>
                         <p style={{ maxWidth: '300px' }}>{content.school.tagline}</p>
                     </div>
@@ -47,7 +47,7 @@ export const Footer = () => {
 
 export const FloatingWhatsApp = () => {
     const whatsappNumber = content.school.phone.replace(/\\D/g, ''); // Extract only numbers
-    const message = "Hello, I would like to know more about Kidsome Pre-Primary School.";
+    const message = "Hello, I would like to know more about Kidzee Preschool.";
     const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
 
     return (

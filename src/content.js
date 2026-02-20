@@ -1,10 +1,10 @@
 export const content = {
     school: {
-        name: "Kidsome Pre-Primary School",
+        name: "Kidzee Preschool",
         tagline: "Where Little Minds Grow Big Dreams",
         phone: "+91 98765 43210", // Placeholder
-        email: "info@kidsomepreschool.com",
-        address: "Bakori Rd, opposite Neo City, Wagholi, Pune, Maharashtra 412207",
+        email: "info@kidzeepreschool.com",
+        address: "THE ORCHID Society premises, Ivy Estate Rd, opp. IVY BOTANICA, Wagholi, Pune, Maharashtra 412207",
         timings: "Monday - Saturday: 8:30 AM - 3:00 PM",
         mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.20172670731!2d73.9859567!3d18.5649065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c3bc6bd615bb%3A0xe5f992f96eec50e1!2sKidsome%20Pre-Primary%20School!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin", // Placeholder map URL for Wagholi
         social: {
@@ -13,7 +13,7 @@ export const content = {
         }
     },
     hero: {
-        heading: "Welcome to Kidsome",
+        heading: "Welcome to Kidzee",
         subheading: "A joyful, play-based preschool where every child is nurtured to achieve their full potential in a safe, colorful environment.",
         cta1: "Book a Visit",
         cta2: "Enquiry Now",
@@ -21,7 +21,7 @@ export const content = {
     },
     about: {
         title: "About Us",
-        philosophy: "At Kidsome, we believe in early childhood development through fun, hands-on learning.",
+        philosophy: "At Kidzee, we believe in early childhood development through fun, hands-on learning.",
         mission: "To provide a warm, stimulating, and safe environment that encourages creativity, curiosity, and emotional growth.",
         teachingApproach: [
             "Activity-Based Learning",
@@ -64,7 +64,7 @@ export const content = {
             id: 1,
             parent: "Priya Sharma",
             child: "Aarav (Jr KG)",
-            feedback: "Kidsome has completely transformed Aarav. He loves going to school and his vocabulary has improved immensely. The teachers are wonderful!"
+            feedback: "Kidzee has completely transformed Aarav. He loves going to school and his vocabulary has improved immensely. The teachers are wonderful!"
         },
         {
             id: 2,
