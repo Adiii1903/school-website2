@@ -71,20 +71,21 @@ const Navbar = () => {
             flex-direction: column;
             position: fixed;
             top: 0;
-            right: \${menuOpen ? '0' : '-100%'};
-            width: 70vw;
+            left: 0;
+            width: 100vw;
             height: 100vh;
             background: rgba(255, 255, 255, 0.98);
             backdrop-filter: blur(10px);
-            padding: 5rem 2rem 2rem 2rem;
-            box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+            padding: 6rem 2rem 2rem 2rem;
             gap: 2rem !important;
-            transition: right 0.3s ease-in-out;
-            align-items: flex-start !important;
+            transition: transform 0.3s ease-in-out;
+            transform: \${menuOpen ? 'translateX(0)' : 'translateX(100%)'};
+            align-items: center !important;
+            z-index: 999;
           }
           .mobile-menu-btn {
             display: block !important;
-            z-index: 1001;
+            z-index: 1000;
             position: relative;
           }
         }
