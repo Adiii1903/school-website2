@@ -74,9 +74,9 @@ const Navbar = () => {
             left: 0;
             right: 0;
             background: white;
-            padding: 2rem;
+            padding: 1.5rem;
             box-shadow: var(--shadow-md);
-            gap: 1.5rem !important;
+            gap: 1rem !important;
           }
           .mobile-menu-btn {
             display: block !important;
